@@ -67,8 +67,8 @@ module DeliverySugar
         "kitchen #{action} #{suite} #{@options}",
         cwd: @repo_path,
         env: @environment.merge!('KITCHEN_YAML' => kitchen_yaml_file),
-        live_stream: STDOUT
-        timeout 3600
+        live_stream: STDOUT,
+        timeout: 3600
       )
     end
 
